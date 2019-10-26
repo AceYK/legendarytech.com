@@ -10,9 +10,11 @@
 @import url('https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap')
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+English+SC&display=swap')
 @import url('https://fonts.googleapis.com/css?family=Rye&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Lemon&display=swap')
 
 #app
-  font-family: 'Avenir', Helvetica, Arial, sans-serif
+  font-family: 'Crimson Text', 'Avenir', Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   text-align: center
@@ -23,6 +25,9 @@
 
 .rye
   font-family: 'Rye', cursive
+
+.font_lemon
+  font-family: 'Lemon', cursive
 
 .nav_font
   font-family: 'IM Fell English SC', serif
