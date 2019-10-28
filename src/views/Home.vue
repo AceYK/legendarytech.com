@@ -23,64 +23,81 @@
           p.absolute.rye.img_word Small website
         .flex.md-justify-center
           ul(style='list-style: square inside none;')
-            li Personal interactive website
+            li Personal Interactive Website
+            li Landing Page
       div
         .hidden.md-flex.flex.flex-col.justify-center.items-center.relative(style='height: 400px')
           img.inline-block(src='/image/computer.jpg' style='width: 200px')
           p.absolute.rye.img_word Medium website
         .flex.md-justify-center
           ul(style='list-style: square inside none;')
-            li Professional marketing webpage
+            li Single Page Website
+            li Marketing Webpage
       div
-        .hidden.md-flex.flex.flex-col.justify-center.items-center.relative(style='height: 400px')
+        .hidden.md-flex.flex-col.justify-center.items-center.relative(style='height: 400px')
           img.inline-block(src='/image/computer.jpg' style='width: 250px')
           p.absolute.rye.img_word Huge website
         .flex.md-justify-center
-          ul(style='list-style: square inside none;')
-            li E-commerce
-            li Blog
-            li Social platform
+          .flex(style='flex: 2')
+            ul(style='list-style: square inside none;')
+              li Social Platform
+              li E-Commerce
+              li Blog
+          .hidden.md-flex(style='flex: 2')
+            ul
+              li (Realtime Chatbox)
+              li (Payment Gateway)
+              li (CMS)
       div
-        .hidden.md-flex.flex.flex-col.justify-center.items-center.relative(style='height: 400px')
+        .hidden.md-flex.flex-col.justify-center.items-center.relative(style='height: 400px')
           img.inline-block(src='/image/computer.jpg' style='width: 300px')
           p.absolute.rye.img_word Corporate website
         .flex.md-justify-center
-          ul(style='list-style: square inside none;')
-            li Enterprise webapp
-            li Enterprise website
+          .flex(style='flex: 2')
+            ul(style='list-style: square inside none;')
+              li Enterprise Webapp
+          .hidden.md-flex(style='flex: 2')
+            ul
+              li (End-to-end Features)
   #service.flex.text-xl
-    .flex.justify-center.items-center(style='flex: 2')
-      .font-bold.italic.text-4xl Services
-    .service.flex.justify-center(style='flex: 2')
-      ul.inline-block.m-10(style='list-style: square inside none;')
-        li Website Development
-        li Website Deisng
-        li Website Tracking, Traffice and Analytic
-        li Websit Maintence
-        li Mobile Responsive
-        li Unlimited Webpages
-        li SSL Security
-        li Search Engine Optimisation (SEO)
-        li Customized Domain Name
-        li Customized Email
-        li Payment Gateway
-        li Content Management System
-  .flex.flex-col.justify-center.items-center.p-10.relative
-    .font_lemon.text-2xl(style='color: rgba(28, 56, 130, 0.68)') Your One Stop Solution For Webpage Is Here !
-    img(src='/image/stroke.png' style='width: 100px')
-  #contact.h-screen
-    .flex.text-xl.justify-center.items-center
-      .flex.flex-col.p-10(style='flex: 2')
-        .flex.items-center
-          i(class="far fa-envelope" style='flex: 2')
-          .text-left.text-2xl(style='flex: 2') aceyk12@gmail.com
-        .flex.items-center
-          i(class="fab fa-whatsapp" style='flex: 2')
-          .text-left.text-2xl(style='flex: 2') +6013-338 6813
-      .skyblue.flex.justify-center.items-center.p-10(style='flex: 2')
-        .font-bold.italic.text-4xl Contact Us
+    .flex.flex-col.relative.p-10(style='flex: 2')
+      img.absolute(src='/image/service_desktop.png' style='width: 100px')
+      img.absolute(src='/image/service_storage.png' style='width: 100px; top: 100%')
+      img.absolute(src='/image/service_network.png' style='width: 100px; top: 187%')
+    .flex.flex-col.justify-center.p-10.pb-0.relative(style='flex: 2')
+      .font_lemon.text-xl(style='color: rgba(28, 56, 130, 0.68)') Your One Stop Solution For Webpage Is Here !
+      img.mx-20(src='/image/stroke.png' style='width: 150px')
+  .flex.text-xl
+    .flex.justify-center.items-center.skyblue.mr-5(style='flex: 2;clip-path: polygon(100% 0, 100% 66%, 0 100%, 0% 100%);')
+      div(style='flex: 2')
+      .font-bold.italic.text-4xl(style='flex: 2') Services
+    div(style='flex: 2')
+      .service.flex.justify-center
+        ul.inline-block.p-10(style='list-style: square inside none; background: rgba(0, 0, 0, 0.7)')
+          li Website Development
+          li Website Design
+          li Website Tracking and Analytic
+          li Websit Maintence
+          li Mobile Responsive
+          li Unlimited Webpages
+          li SSL Security
+          li SEO Optimisation
+          li Customized Domain Name
+          li Customized Email
+          li Payment Gateway
+          li Content Management System
+  #contact.h-screen.mt-10
+    .w-full.skyblue.p-24.absolute(style='clip-path: polygon(100% 0, 15% 0, 100% 100%);')
+      .font-bold.italic.text-4xl.text-right Contact Us
+    .flex.flex-col.p-10.pt-24
+      .flex.items-center.text-2xl
+        i.mx-5(class="far fa-envelope")
+        .text-left aceyk12@gmail.com
+      .flex.items-center.text-2xl
+        i.mx-5(class="fab fa-whatsapp")
+        .text-left +6013-338 6813
     .flex.flex-col.items-center.p-10.px-20.text-left
-      .paper(style='width: 100%; max-width: 500px')
+      .paper.skyblue.p-5(style='width: 100%; max-width: 500px')
         div.py-10
           .inline-block.text-2xl Leave Us A Message
           .inline-block.pl-2 -- or let us contact you !
@@ -100,8 +117,6 @@
 
 <style lang="sass">
 .skyblue
-  // background: rgb(255,255,255)
-  // background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(157,233,255,1) 35%, rgba(0,212,255,1) 100%)
   background-image: url("/image/sky.png")
   background-position: center
   background-repeat: no-repeat
@@ -117,7 +132,7 @@
   transform: translate(-50%, -115%)
   white-space: nowrap
 .service
-  background-image: url("/image/office.jpg")
+  background-image: url("/image/office.jpeg")
   background-position: center
   background-repeat: no-repeat
   background-size: cover
