@@ -7,10 +7,10 @@
       a.nav_item(href='#service') Service
       a.nav_item(href='#contact') Contact Us
     .nav_item legendarytech.co
-    button.px-3.py-2.border.rounded.md-hidden(@click="toggle")
-      svg(class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg")
-        title Menu
-        path(d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z")
+    //- button.px-3.py-2.border.rounded.md-hidden(@click="toggle")
+    //-   svg(class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg")
+    //-     title Menu
+    //-     path(d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z")
   #home.flex.justify-around.flex-wrap.items-center
     img.inline-block.m-5(src="/image/logo.png" style='width: 300px')
     .inline-block.m-5.homemade_apple.md-text-left(style='font-size: 36px; max-width: 600px;') Create your own customized webpage now!
@@ -102,18 +102,38 @@
           .inline-block.text-2xl Leave Us A Message
           .inline-block.pl-2 -- or let us contact you !
         p Name
-        input
+        input(v-model='name')
         p Phone Number
-        input
+        input(v-model='phone')
         p Email
-        input
+        input(v-model='mail')
         p Type of Business
-        input
+        input(v-model='type')
         p Message
-        input
+        textarea.w-full(v-model='msg')
         .flex.flex-row-reverse.my-5
-          button.hover-bg-blue.hover-text-white.py-2.px-4.border.hover-border-transparent.rounded-full Submit
+          button.hover-bg-blue.hover-text-white.py-2.px-4.border.hover-border-transparent.rounded-full(@click='sendMail') Submit
 </template>
+
+<script>
+export default {
+  name: 'Home',
+  data () {
+    return {
+      name: '',
+      phone: '',
+      mail: '',
+      type: '',
+      msg: ''
+    }
+  },
+  methods: {
+    sendMail () {
+      window.open(`mailto:aceyk12@gmail.com?subject=Legendary%20Tech&body=Name:%20${this.name}%0D%0A%0D%0APhone:%20${this.phone}%0D%0A%0D%0AEmail:%20${this.mail}%0D%0A%0D%0ABusiness%20Type:%20${this.type}%0D%0A%0D%0A${this.msg}`)
+    }
+  }
+}
+</script>
 
 <style lang="sass">
 .skyblue
@@ -147,4 +167,6 @@ input
   height: 40px
   width: 100%
   padding-left: 20px
+textarea
+  height: 120px
 </style>
