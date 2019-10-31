@@ -1,5 +1,11 @@
 <template lang='pug'>
 .flex.flex-col.h-screen
+  .overlay.absolute.z-10.h-full.w-full(v-if='pop')
+    .flex.flex-col.justify-center.items-center.h-full
+      .main
+        .flex.flex-col.justify-center.items-center.h-full.relative
+          img.w-8.absolute(src="image/cross.png" style='top: 20px; right: 20px' @click='close')
+          .homemade_apple.text-3xl Updating
   .flex.justify-between.nav_font.skyblue.py-1
     div.hidden.md-block
       a.nav_item(href='#home') Homepage
@@ -120,6 +126,7 @@ export default {
   name: 'Home',
   data () {
     return {
+      pop: true,
       name: '',
       phone: '',
       mail: '',
@@ -130,12 +137,35 @@ export default {
   methods: {
     sendMail () {
       window.open(`mailto:aceyk12@gmail.com?subject=Legendary%20Tech&body=Name:%20${this.name}%0D%0A%0D%0APhone:%20${this.phone}%0D%0A%0D%0AEmail:%20${this.mail}%0D%0A%0D%0ABusiness%20Type:%20${this.type}%0D%0A%0D%0A${this.msg}`)
+    },
+    close () {
+      this.pop = !this.pop
+      document.body.style.overflow = 'auto'
     }
+  },
+  mounted () {
+    document.body.style.overflow = 'hidden'
   }
+  // destroyed () {
+  //   // document.body.style.overflow = 'auto'
+  //   if (window.$STORE.modalCount === 0) {
+  //     document.body.style.overflow = 'auto'
+  //     document.querySelector('html').style.overflow = 'auto'
+  //   }
+  // }
 }
 </script>
 
 <style lang="sass">
+.overlay
+  background: rgba(0,0,0,0.7)
+.main
+  top: 0
+  left: 50%
+  width: 300px
+  height: 300px
+  border-radius: 50px
+  background: white
 .skyblue
   background-image: url("/image/sky.png")
   background-position: center
