@@ -66,35 +66,38 @@
             ul
               li (End-to-end Features)
   #service.flex.text-xl
-    .flex.flex-col.relative.p-10(style='flex: 2')
-      img.absolute(src='/image/service_desktop.png' style='width: 100px')
-      img.absolute(src='/image/service_storage.png' style='width: 100px; top: 100%')
-      img.absolute(src='/image/service_network.png' style='width: 100px; top: 187%')
-    .flex.flex-col.justify-center.p-10.pb-0.relative(style='flex: 2')
+    .hidden.md-flex.flex-col.relative.p-10(style='flex: 2')
+      //- img.absolute(src='/image/service_desktop.png' style='width: 100px')
+      //- img.absolute(src='/image/service_storage.png' style='width: 100px; top: 100%')
+      //- img.absolute(src='/image/service_network.png' style='width: 100px; top: 187%')
+    .flex.flex-col.justify-center.p-10.relative(style='flex: 2')
       .font_lemon.text-xl(style='color: rgba(28, 56, 130, 0.68)') Your One Stop Solution For Webpage Is Here !
-      img.mx-20(src='/image/stroke.png' style='width: 150px')
+      //- img.mx-20(src='/image/stroke.png' style='width: 150px')
   .flex.text-xl
-    .flex.justify-center.items-center.skyblue.mr-5(style='flex: 2;clip-path: polygon(100% 0, 100% 66%, 0 100%, 0% 100%);')
+    .hidden.md-flex.justify-center.items-center.skyblue.mr-5(style='flex: 2;clip-path: polygon(100% 0, 100% 66%, 0 100%, 0% 100%);')
       div(style='flex: 2')
       .font-bold.italic.text-4xl(style='flex: 2') Services
     div(style='flex: 2')
       .service.flex.justify-center
-        ul.inline-block.p-10(style='list-style: square inside none; background: rgba(0, 0, 0, 0.7)')
-          li Website Development
-          li Website Design
-          li Website Tracking and Analytic
-          li Websit Maintence
-          li Mobile Responsive
-          li Unlimited Webpages
-          li SSL Security
-          li SEO Optimisation
-          li Customized Domain Name
-          li Customized Email
-          li Payment Gateway
-          li Content Management System
+        div(style='background: rgba(0, 0, 0, 0.7)')
+          .font-bold.italic.text-4xl.md-hidden.pt-10 Services
+          ul.inline-block.p-10(style='list-style: square inside none;')
+            li Website Development
+            li Website Design
+            li Website Tracking and Analytic
+            li Websit Maintence
+            li Mobile Responsive
+            li Unlimited Webpages
+            li SSL Security
+            li SEO Optimisation
+            li Customized Domain Name
+            li Customized Email
+            li Payment Gateway
+            li Content Management System
   #contact.h-screen.mt-10
-    .w-full.skyblue.p-24.absolute(style='clip-path: polygon(100% 0, 15% 0, 100% 100%);')
+    .hidden.md-block.w-full.skyblue.p-24.absolute(style='clip-path: polygon(100% 0, 15% 0, 100% 100%);')
       .font-bold.italic.text-4xl.text-right Contact Us
+    .font-bold.italic.text-4xl.md-hidden Contact Us
     .flex.flex-col.p-10.pt-24
       .flex.items-center.text-2xl
         i.mx-5(class="far fa-envelope")
@@ -102,8 +105,8 @@
       .flex.items-center.text-2xl
         i.mx-5(class="fab fa-whatsapp")
         .text-left +6013-338 6813
-    .flex.flex-col.items-center.p-10.px-20.text-left
-      .paper.skyblue.p-5(style='width: 100%; max-width: 500px')
+    .flex.flex-col.items-center.pt-10.px-20.text-left
+      .paper.skyblue.p-5(style='width: 100%; max-width: 500px; min-width: 375px')
         div.py-10
           .inline-block.text-2xl Leave Us A Message
           .inline-block.pl-2 -- or let us contact you !
@@ -144,6 +147,7 @@ export default {
     }
   },
   mounted () {
+    window.scrollTo(0, 0)
     document.body.style.overflow = 'hidden'
   }
   // destroyed () {
