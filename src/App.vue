@@ -20,6 +20,12 @@
   text-align: center
   color: #2c3e50
 
+html
+  background-image: url("/image/sky.png")
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
 .homemade_apple
   font-family: 'Homemade Apple', cursive
 

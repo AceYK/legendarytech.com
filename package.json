@@ -1,13 +1,17 @@
 {
-  "name": "legendarytech.com",
+  "name": "legendarytech.co",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "boxes start",
+    "watch": "boxes start --watch",
+    "lint:js": "standard",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@boxescms/server": "^0.1.5",
     "@fullhuman/postcss-purgecss": "^1.3.0",
     "autoprefixer": "^9.6.5",
     "core-js": "^3.3.2",
@@ -27,5 +31,8 @@
     "sass-loader": "^8.0.0",
     "vue-cli-plugin-pug": "^1.0.7",
     "vue-template-compiler": "^2.6.10"
+  },
+  "standard": {
+    "parser": "babel-eslint"
   }
 }
